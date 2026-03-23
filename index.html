@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <script defer src="script/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Memory Match Game</title>
+</head>
+<body>
+
+ <nav class="navbar">
+    <div class="center">
+        <h1 class="game-title">Memory Match Game</h1>    
+    </div>
+
+
+    <div class="nav-bottom-row">
+        <div class="nav-left">
+            <img src="img/logo.png" alt="Game Logo" class="logo">
+            <h1 class="charity-title">Charity: Water</h1>
+        </div>
+
+        <div class="nav-right">
+            <span>🎮 Level: <span id="level">1</span></span>
+            <span>⭐ Score: <span id="score">0</span></span>
+            <span>⏱ Time: <span id="time">20</span></span>
+            <span>❤️ Tries: <span id="tries">3</span></span>
+            <button id="restartGameBtn" class="restart-btn">Restart</button>
+        </div>
+    </div>
+</nav>
+<div id="startScreen" class="popup">
+
+  <div class="start-content">
+    <!-- Background image -->
+    <div class="start-image">
+      <img src="img/heroback.png" alt="Game Background">
+    </div>
+
+    <!-- Game title and rules -->
+    <h1>Charity: Water</h1>
+<h2>Memory Match Game</h2>
+<p id="startInstructions">Select your difficulty and match the cards in 30 seconds!</p>
+
+<div class="difficulty-container">
+    <button class="diff-btn" data-level="easy">Easy</button>
+    <button class="diff-btn active" data-level="medium">Medium</button>
+    <button class="diff-btn" data-level="hard">Hard</button>
+</div>
+
+
+    <!-- Start button -->
+    <button id="startGameBtn">Start Game</button>
+  </div>
+
+</div>
+
+<div class="game-board" id="gameBoard"></div>
+
+<div id="levelPopup" class="popup">
+    
+
+    <div class="popup-content">
+        <h2 id="popupLevelText">Level 1</h2>
+        <p id="popupInstructions"></p>
+        <button id="startBtn">Start</button>
+    </div>
+
+</div>
+<div id="victoryPopup" class="popup" style="display:none;">
+    <div class="popup-content">
+        <h1>🏆 YOU WON! 🏆</h1>
+        <p>You mastered all 6 levels!</p>
+        <div class="confetti-container">🎉✨🎊</div>
+        <button id="restartBtn" onclick="location.reload()">Play Again</button>
+    </div>
+</div>
+<footer class="game-footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <img src="img/logo.png" alt="Logo" class="footer-logo">
+            <span>&copy; 2026 Memory Match</span>
+        </div>
+        
+        <div class="footer-center">
+            <a href="https://www.facebook.com/charitywater/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/charitywater/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/charitywater" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@charitywater" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+
+           <a href="https://www.charitywater.org" target="_blank" class="footer-link">Visit Charity: Water</a>
+            <a href="https://www.charitywater.org/donate" target="_blank" class="donate-btn">Donate Now</a>
+        </div>
+
+        <div class="footer-right"></div>
+</footer>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
